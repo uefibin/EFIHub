@@ -4,6 +4,18 @@
 
 EFIHub 是一个运行在 UEFI/EFI 环境中的图形化硬件调试与系统工具集合，基于 LVGL 构建，目标是在没有操作系统的环境下，也能提供相对现代、直观的图形界面和常用底层调试能力。
 
+当前版本：**v0.2**。
+
+## 界面截图
+
+![EFIHub 主界面](docs/images/efihub.png)
+
+## v0.2 更新
+
+- 修复部分平台外接 USB 键盘无法操作的问题，统一读取固件控制台输入。
+- 新增 F12 / Print Screen 截图，自动保存 BMP 文件。
+- 默认关闭键盘及 USB 枚举 TXT 诊断日志。
+
 ## 当前功能
 
 - I/O Index
@@ -49,10 +61,11 @@ EFIHub 主要面向键盘操作，底部状态栏会根据当前 Mini App 显示
 - `F6`：RegTable 位宽切换
 - `Win + Up/Down`：部分 Mini App 全屏切换
 - `Ctrl + Space`：文本编辑器中英文输入法切换
+- `F12` / `Print Screen`：截图，保存到应用所在磁盘的 `\Screenshots\Screenshot-0001.bmp`，编号自动递增。Print Screen 需要固件上报 SysRq 按键状态。
 
 ## 下载
 
-请前往 GitHub Releases 下载最新版本：
+请前往 [GitHub Releases](https://github.com/uefibin/EFIHub/releases/latest) 下载最新版本：
 
 - `EH_X64.efi`：X64 UEFI 应用
 

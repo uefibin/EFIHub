@@ -4,6 +4,18 @@
 
 EFIHub is a graphical hardware debugging and system utility suite designed to run directly in UEFI/EFI environments. It is built with LVGL and aims to provide a modern, intuitive interface for low-level diagnostics without requiring an operating system.
 
+Current version: **v0.2**.
+
+## Screenshot
+
+![EFIHub main screen](docs/images/efihub.png)
+
+## Changes in v0.2
+
+- Fix external USB keyboard input on affected platforms by reading the firmware console input interface.
+- Add F12 / Print Screen capture with automatic BMP file numbering.
+- Disable keyboard and USB enumeration TXT diagnostics by default.
+
 ## Current Features
 
 - I/O Index
@@ -49,10 +61,11 @@ Common shortcuts include:
 - `F6`: switch RegTable access width
 - `Win + Up/Down`: fullscreen toggle in supported Mini Apps
 - `Ctrl + Space`: switch English / Chinese input mode in the text editor
+- `F12` / `Print Screen`: save a screenshot to `\Screenshots\Screenshot-0001.bmp` on the application's drive. File numbers increase automatically. Print Screen requires firmware support for the SysRq key state.
 
 ## Download
 
-Download the latest build from GitHub Releases:
+Download the latest build from [GitHub Releases](https://github.com/uefibin/EFIHub/releases/latest):
 
 - `EH_X64.efi`: X64 UEFI application
 
